@@ -1,0 +1,33 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Редакторы
+.vscode/
+.idea/
+*.swp
+*~
+Jupyter/
+Paper/
+logos_work/
+
+# ОС
+.DS_Store
+Thumbs.db
+
+# Прочее
+#*.pdf
+#!poster.pdf
