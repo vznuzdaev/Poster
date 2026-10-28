@@ -67,8 +67,7 @@ a0paper%,
 \newcommand{\BoxHeaderSize}{\fontsize{11}{13}\selectfont}
 
 % --- Основной текст блоков ---
-%   Второй параметр (межстрочный интервал) уменьшен с 10pt до 9pt.
-\newcommand{\BoxBodySize}{\fontsize{8}{9}\selectfont}
+\newcommand{\BoxBodySize}{\fontsize{8}{8}\selectfont}
 
 % --- Подписи под рисунками (captionof) ---
 \newcommand{\FigCaptionFont}{\scriptsize}     % можно \small, \footnotesize и т.п.
@@ -239,15 +238,14 @@ a0paper%,
     above=bottom, headershape=rectangle,
     textborder=none, borderColor=NSMD, boxheaderheight=0pt, boxpadding=0.5em}{%               
     \hspace*{-1.8em}
-    \begin{minipage}[t]{0.15\textwidth}
+    \begin{minipage}[t]{0.10\textwidth}
         \FooterContactSize
         \textbf{Троцай Н.А.}\\
         % ОНСМ ОПР\\
         % НИЦ «КИ»~--- ПИЯФ\\
         nikitatrotsay@gmail.com
-        \vspace{0.1cm}%
-
-        \qrcode[height=2.0cm]{mailto:marat.vznuzdaev@yandex.ru}%
+        \vspace{-0.2cm}\\
+        \qrcode[height=1.5cm]{mailto:nikitatrotsay@gmail.com}%
     \end{minipage}%
     \hfill
     \vrule
@@ -276,26 +274,36 @@ a0paper%,
 % БЛОК 2: Методология / Эксперимент
 \headerbox{Экспериментальный стенд}{name=vmeas, span=3, below=introduction, column=0}{%
     \BoxBodySize
-    \emph{Источник нейтронов ИБН-8-5}~\cite{mayak2020} с активностью
-    2,4×10$^{11}$\,Бк на момент изготовления обеспечивал полный нейтронный
-    поток 0,95(20)·10⁷ с$^{-1}$. 
-    
-    % Срок службы источника, представляющего собой
-    % цилиндр диаметром 18\,мм и высотой 22\,мм, ограничен коррозионной
-    % стойкостью его корпуса и составляет~10\,лет.
-    \vspace{-0.3cm}
-    \begin{center}
-        \includegraphics[width=0.45\textwidth, keepaspectratio]{Images/setup.pdf}
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%  % включает выравнивание [t] по верхнему краю
+        \emph{Источник нейтронов ИБН-8-5}~\cite{mayak2020} с активностью
+        2,4×10$^{11}$\,Бк (на момент изготовления) обеспечивает полный
+        нейтронный поток 0,95(20)·10⁷ с$^{-1}$. Спектр нейтронов от источника
+        ИБН-8-5 простирается до энергии 10\,МэВ при средней энергии
+        $\approx 4{,}5$\,МэВ. Спектрометрический тракт состоит из
+        коаксиального детектора на основе HPGe, предусилителя и анализатора.
+        Конструкция радиационной защиты установки разработана с учётом
+        модельных спектров излучения Pu--Be-источника
+        (рис.~\ref{fig:neutron} и рис.~\ref{fig:gamma})~\cite{ershov2018}.
+        Срок службы источника, представляющего собой цилиндр диаметром
+        18\,мм и высотой 22\,мм, ограничен коррозионной стойкостью его
+        корпуса и составляет~10\,лет.
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%  % включает выравнивание [t] по верхнему краю
+        \centering
+        \includegraphics[width=0.9\textwidth, keepaspectratio]{Images/setup.pdf}
         \captionof{figure}{Общий вид установки нейтронного облучения СТЕНА}
-    \end{center}
-    \vspace{-0.3cm}
-    Спектр нейтронов от источника ИБН-8-5 простирается до энергии 10\,МэВ
-    со средней энергией около 4,5\,МэВ. Спектрометрический тракт состоит из
-    коаксиального детектора на основе HPGe, предусилителя и анализатора.
+        \label{fig:setup}
+    \end{minipage}
+
+
+
     % Разрешение детектора составляло 0,68\,кэВ на линии 122\,кэВ $^{57}$Со
     % и 1,68\,кэВ на линии 1332,5 кэВ $^{60}$Со~\cite{browne1986}.
 
-    Конструкция радиационной защиты установки разработана с учетом модельных спектров излучения Pu-Be источника (Рис.\,\ref{fig:neutron} и Рис.\,\ref{fig:gamma})~\cite{ershov2018}. 
+     
     \vspace{-0.3cm}
     \begin{center}
         % Левый график — нейтроны
