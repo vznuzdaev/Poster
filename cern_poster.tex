@@ -1,6 +1,6 @@
 % ============================================================================
-%  ПОСТЕР: Хроматографический метод исследования адсорбционных свойств
-%  материалов, импрегнированных фуллеренами
+%  ПОСТЕР: Результаты методических работ по изучению характеристик
+% стенда проведения нейтронной активации
 %  Класс: baposter (A0, portrait)
 % ============================================================================
 \documentclass[
@@ -67,7 +67,7 @@ a0paper%,
 \newcommand{\BoxHeaderSize}{\fontsize{11}{13}\selectfont}
 
 % --- Основной текст блоков ---
-\newcommand{\BoxBodySize}{\fontsize{8}{8}\selectfont}
+\newcommand{\BoxBodySize}{\fontsize{8}{9}\selectfont}
 
 % --- Подписи под рисунками (captionof) ---
 \newcommand{\FigCaptionFont}{\scriptsize}     % можно \small, \footnotesize и т.п.
@@ -271,24 +271,15 @@ a0paper%,
     В НИЦ «Курчатовский институт»~--- ПИЯФ в рамках подготовки программы фундаментальных и прикладных исследований на реакторе ПИК проводятся методические работы по нейтронно-активационному анализу; для их осуществления создана установка СТЕНА (СТЕнд Нейтронной Активации). Установка дает возможность проведения мгновенного и задержанного инструментального \linebreak нейтронно-активационного анализа (НАА).
 }
 
-% БЛОК 2: Методология / Эксперимент
+% БЛОК 2: Установка
 \headerbox{Экспериментальный стенд}{name=vmeas, span=3, below=introduction, column=0}{%
     \BoxBodySize
     \noindent
     \begin{minipage}[t]{0.48\textwidth}
-        \vspace{0pt}%  % включает выравнивание [t] по верхнему краю
-        \emph{Источник нейтронов ИБН-8-5}~\cite{mayak2020} с активностью
-        2,4×10$^{11}$\,Бк (на момент изготовления) обеспечивает полный
-        нейтронный поток 0,95(20)·10⁷ с$^{-1}$. Спектр нейтронов от источника
-        ИБН-8-5 простирается до энергии 10\,МэВ при средней энергии
-        $\approx 4{,}5$\,МэВ. Спектрометрический тракт состоит из
-        коаксиального детектора на основе HPGe, предусилителя и анализатора.
-        Конструкция радиационной защиты установки разработана с учётом
-        модельных спектров излучения Pu--Be-источника
-        (рис.~\ref{fig:neutron} и рис.~\ref{fig:gamma})~\cite{ershov2018}.
-        Срок службы источника, представляющего собой цилиндр диаметром
-        18\,мм и высотой 22\,мм, ограничен коррозионной стойкостью его
-        корпуса и составляет~10\,лет.
+        \vspace{0pt}%  
+        \emph{Источник нейтронов ИБН-8-5}~\cite{mayak2020} с активностью $2\text{,}4\cdot{10}^{11}$\,Бк (на момент изготовления) обеспечивает полный нейтронный поток $0\text{,}95(20)\cdot{10}^7$~с$^{-1}$. Спектр нейтронов от источника ИБН-8-5 простирается до энергии 10\,МэВ при средней энергии $\approx 4{,}5$\,МэВ. Спектрометрический тракт состоит из коаксиального детектора на основе HPGe, предусилителя и анализатора.
+        Конструкция радиационной защиты установки разработана с учётом модельных спектров излучения Pu--Be-источника (рис.~\ref{fig:neutron} и рис.~\ref{fig:gamma})~\cite{ershov2018}. Срок службы источника, представляющего собой цилиндр диаметром
+        18\,мм и высотой 22\,мм, ограничен коррозионной стойкостью его корпуса и составляет~10\,лет.
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%  % включает выравнивание [t] по верхнему краю
@@ -297,13 +288,6 @@ a0paper%,
         \captionof{figure}{Общий вид установки нейтронного облучения СТЕНА}
         \label{fig:setup}
     \end{minipage}
-
-
-
-    % Разрешение детектора составляло 0,68\,кэВ на линии 122\,кэВ $^{57}$Со
-    % и 1,68\,кэВ на линии 1332,5 кэВ $^{60}$Со~\cite{browne1986}.
-
-     
     \vspace{-0.3cm}
     \begin{center}
         % Левый график — нейтроны
@@ -323,73 +307,93 @@ a0paper%,
     \end{center}
 }
 
-% ==================== БЛОК 5: Калибровка эффективности (левая колонка) ====================
 \headerbox{Калибровка эффективности}{name=summary, span=3, below=vmeas, column=0}{%
     \BoxBodySize
-    Площади \(S\) аналитических пиков (число отсчётов) с энергией \(E\)
-    связаны с активностью \(A\) источника, выходом гамма-излучения на один
-    распад \(q\), временем измерения \(t\) и эффективностью регистрации
-    \(\varepsilon\):
-    \vspace{-1.5em}
-    \begin{equation}
-        S = A \cdot q \cdot t \cdot \varepsilon .
-        \label{eq:S}
-    \end{equation}
-    \vspace{-2.5em}
-
-    По условиям приготовления обоих источников их активности \(A\) одинаковы.
-    Для её определения использовались точечный стандартный источник и
-    калибровочная зависимость эффективности
-    \vspace{-1.0em}
-    \begin{equation}
-        \ln\varepsilon
-        = \sum_{k=0}^{4} a_k (\ln E)^k
-        \label{eq:ln-eps}
-    \end{equation}
-    \vspace{-1.5em}
-    
+    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
     \noindent
-    \begin{minipage}[t]{0.48\linewidth}
-        \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        По условиям приготовления обоих источников их активности \(A\) одинаковы.
+        Для её определения использовались точечный стандартный источник и
+        калибровочная зависимость эффективности:
+        \begin{equation}
+            \varepsilon(E)
+            = \varepsilon_0 E^{-\alpha}
+            \frac{1}{1\! + \! \exp\!\left(-\dfrac{E\!-\!E_{\text{th}}}{\Delta E}\right)},
+            \label{eq:eff}
+        \end{equation}
+        где \(\varepsilon_0\) --- параметр нормировки, зависящий от телесного угла;\\
+        \(\alpha\) --- эффективный показатель спада;\\ 
+        \(E_{\text{th}}\) --- порог регистрации, кэВ;\\
+        \(\Delta E\) --- ширина порога регистрации, кэВ.
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
         \includegraphics[width=\linewidth, keepaspectratio]{Images/gamma_spectra_points.pdf}
-        \captionof{figure}{Спектры гамма-излучения точечного (синие точки)
-                          и плоского (красные крестики) стандартных источников}
+        \captionof{figure}{Спектры гамма-излучения точечного (синие точки) и плоского (красные крестики) стандартных источников}
         \label{fig:spectra-eff}
     \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.48\linewidth}
+
+    % ==================== НИЖНИЙ РЯД: 2-й график + 3-й график ====================
+    \vspace{0.3em}
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
         \centering
         \includegraphics[width=\linewidth, keepaspectratio]{Images/efficiency_calibration.pdf}
-        \captionof{figure}{Калибровочная зависимость эффективности
-                          регистрации гамма-излучения для точечного источника}
-        \label{fig:decay-eff}
+        \captionof{figure}{Калибровочная зависимость эффективности регистрации гамма-излучения для точечного источника}
+        \label{fig:gamma-caliber}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/efficiency_calibration_flat.pdf}
+        \captionof{figure}{Калибровочная зависимость эффективности регистрации гамма-излучения для плоского источника}
+        \label{fig:gamma_caliber_flat}
     \end{minipage}
 }
-
 
 % БЛОК 4: Детали / Данные (правая колонка, самый верх)
 \headerbox{Расчеты}{name=resolution, span=3, row=0, column=3}{%
     \BoxBodySize
-    Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
-    и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
-    В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
-    \begin{center}
-        % Левый график
+    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
+        и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
+        В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
+        \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
+        \label{fig:spectra-br}
+    \end{minipage}
+
+    % ==================== НИЖНИЙ РЯД: 2-й график ====================
+    \vspace{0.3em}
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
+        \captionof{figure}{Кривая распада $^{82}$Br}
+        \label{fig:decay-br}
+    \end{minipage}\hfill
         \begin{minipage}[t]{0.48\textwidth}
-            \centering
-            \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
-            \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
-            \label{fig:spectra-br}
-        \end{minipage}\hfill
-        % Правый график
-        \begin{minipage}[t]{0.48\textwidth}
-            \centering
-            \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
-            \captionof{figure}{Кривая распада $^{82}$Br}
-            \label{fig:decay-br}
-        \end{minipage}
-    \end{center}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
+        \captionof{figure}{Кривая распада $^{198}$Au}
+        \label{fig:spectra-br}
+    \end{minipage}
 }
+
+   
+
+
 
 % ==================== КОНЕЦ ПОСТЕРА ====================
 \end{poster}
