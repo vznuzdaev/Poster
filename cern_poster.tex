@@ -67,7 +67,7 @@ a0paper%,
 \newcommand{\BoxHeaderSize}{\fontsize{11}{13}\selectfont}
 
 % --- Основной текст блоков ---
-\newcommand{\BoxBodySize}{\fontsize{8}{9}\selectfont}
+\newcommand{\BoxBodySize}{\fontsize{8}{9.2}\selectfont}
 
 % --- Подписи под рисунками (captionof) ---
 \newcommand{\FigCaptionFont}{\scriptsize}     % можно \small, \footnotesize и т.п.
@@ -354,7 +354,7 @@ a0paper%,
 }
 
 % БЛОК 4: Детали / Данные (правая колонка, самый верх)
-\headerbox{Расчеты}{name=resolution, span=3, row=0, column=3}{%
+\headerbox{Активация брома и золота}{name=resolution, span=3, row=0, column=3}{%
     \BoxBodySize
     % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
     \noindent
@@ -389,6 +389,80 @@ a0paper%,
         \captionof{figure}{Кривая распада $^{198}$Au}
         \label{fig:spectra-br}
     \end{minipage}
+}
+
+\headerbox{Мотивация дальнейших исследований}{name=motivation, below=resolution, span=3, row=0, column=3}{%
+    \BoxBodySize
+    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
+    \noindent
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
+    %     и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
+    %     В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
+    % \end{minipage}\hfill
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
+    %     \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
+    %     \label{fig:spectra-br}
+    % \end{minipage}
+
+    % % ==================== НИЖНИЙ РЯД: 2-й график ====================
+    % \vspace{0.3em}
+    % \noindent
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
+    %     \captionof{figure}{Кривая распада $^{82}$Br}
+    %     \label{fig:decay-br}
+    % \end{minipage}\hfill
+    %     \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
+    %     \captionof{figure}{Кривая распада $^{198}$Au}
+    % %     \label{fig:spectra-br}
+    % \end{minipage}
+}
+
+\headerbox{Выводы и заключение}{name=conclusion, below=motivation, span=3, row=0, column=3}{%
+    \BoxBodySize
+    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
+    \noindent
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
+    %     и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
+    %     В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
+    % \end{minipage}\hfill
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
+    %     \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
+    %     \label{fig:spectra-br}
+    % \end{minipage}
+
+    % % ==================== НИЖНИЙ РЯД: 2-й график ====================
+    % \vspace{0.3em}
+    % \noindent
+    % \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
+    %     \captionof{figure}{Кривая распада $^{82}$Br}
+    %     \label{fig:decay-br}
+    % \end{minipage}\hfill
+    %     \begin{minipage}[t]{0.48\textwidth}
+    %     \vspace{0pt}%
+    %     \centering
+    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
+    %     \captionof{figure}{Кривая распада $^{198}$Au}
+    % %     \label{fig:spectra-br}
+    % \end{minipage}
 }
 
    
