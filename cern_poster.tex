@@ -1,6 +1,6 @@
 % ============================================================================
 %  ПОСТЕР: Результаты методических работ по изучению характеристик
-% стенда проведения нейтронной активации
+%  стенда проведения нейтронной активации
 %  Класс: baposter (A0, portrait)
 % ============================================================================
 \documentclass[
@@ -146,7 +146,6 @@ a0paper%,
 \setlength{\bibitemsep}{0pt}
 \setlength{\bibparsep}{0pt}
 \setlength{\bibinitsep}{1pt}
-
 \setlength{\parskip}{0pt}
 
 % ==================== НАЧАЛО ДОКУМЕНТА ====================
@@ -278,8 +277,10 @@ a0paper%,
     \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%  
         \emph{Источник нейтронов ИБН-8-5}~\cite{mayak2020} с активностью $2\text{,}4\cdot{10}^{11}$\,Бк (на момент изготовления) обеспечивает полный нейтронный поток $0\text{,}95(20)\cdot{10}^7$~с$^{-1}$. Спектр нейтронов от источника ИБН-8-5 простирается до энергии 10\,МэВ при средней энергии $\approx 4{,}5$\,МэВ. Спектрометрический тракт состоит из коаксиального детектора на основе HPGe, предусилителя и анализатора.
-        Конструкция радиационной защиты установки разработана с учётом модельных спектров излучения Pu--Be-источника (рис.~\ref{fig:neutron} и рис.~\ref{fig:gamma})~\cite{ershov2018}. Срок службы источника, представляющего собой цилиндр диаметром
+        Конструкция радиационной защиты установки разработана с учётом модельных спектров излучения Pu--Be-источника (рис.~\ref{fig:neutron} и рис.~\ref{fig:gamma})~\cite{ershov2018}. 
+        Срок службы источника, представляющего собой цилиндр диаметром
         18\,мм и высотой 22\,мм, ограничен коррозионной стойкостью его корпуса и составляет~10\,лет.
+        \vspace{0.5em}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%  % включает выравнивание [t] по верхнему краю
@@ -313,16 +314,14 @@ a0paper%,
     \noindent
     \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%
-        По условиям приготовления обоих источников их активности \(A\) одинаковы.
-        Для её определения использовались точечный стандартный источник и
-        калибровочная зависимость эффективности:
+        Для построения калибровочных зависимостей эффективности регистрации гамма-излучения использовались точечный и плоский источники на основе смеси изотопов \textsuperscript{133}Ba и \textsuperscript{201}Bi равной активностью. Зависимости апроксимировались функцией вида:
+        \vspace{-0.5em}
         \begin{equation}
-            \varepsilon(E)
-            = \varepsilon_0 E^{-\alpha}
-            \frac{1}{1\! + \! \exp\!\left(-\dfrac{E\!-\!E_{\text{th}}}{\Delta E}\right)},
+            \varepsilon(E)\!=\!\varepsilon_0 \, E^{-\alpha}
+            \bigl[ 1\!+\!e^{-(E\!-\!E_{\mathrm{th}})/\Delta E} \bigr]^{-1},
             \label{eq:eff}
         \end{equation}
-        где \(\varepsilon_0\) --- параметр нормировки, зависящий от телесного угла;\\
+        где \(\varepsilon_0\) --- параметр нормировки;\\
         \(\alpha\) --- эффективный показатель спада;\\ 
         \(E_{\text{th}}\) --- порог регистрации, кэВ;\\
         \(\Delta E\) --- ширина порога регистрации, кэВ.
@@ -354,120 +353,99 @@ a0paper%,
 }
 
 % БЛОК 4: Детали / Данные (правая колонка, самый верх)
-\headerbox{Активация брома и золота}{name=resolution, span=3, row=0, column=3}{%
+\headerbox{Активация брома}{name=resolution, span=3, row=0, column=3}{%
     \BoxBodySize
     % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
     \noindent
     \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%
-        Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
-        и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
-        В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
+        \noindent
+        Первый опыт по нейтронной активации проведён с образцом бромида калия, размещённым внутри водяной полости. Естественная смесь изотопов брома. В результате активации образуются четыре долгоживущих состояния брома. Гамма-спектры активированного образца измерялись офлайн четыре раза сеансами разной длительности. По измеренным данным построена распадная зависимость и вычислено значение периода полураспада \textsuperscript{82}Br $T_{1/2}=1{,}45(3)$~сут, согласующееся с табличным $1{,}4701(3)$~сут~\cite{iaea_livechart} в пределах погрешности.
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/82B_decay.pdf}
+        \captionof{figure}{Сокращенная схема распада $^{82}$Br}
+        \label{fig:decay-br-scheme}
+    \end{minipage}
+
+
+    % ==================== НИЖНИЙ РЯД: 2-й график ====================
+    \vspace{0.3em}
+    \noindent
+        \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%
         \centering
         \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
         \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
         \label{fig:spectra-br}
-    \end{minipage}
-
-    % ==================== НИЖНИЙ РЯД: 2-й график ====================
-    \vspace{0.3em}
-    \noindent
-    \begin{minipage}[t]{0.48\textwidth}
-        \vspace{0pt}%
-        \centering
-        \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
-        \captionof{figure}{Кривая распада $^{82}$Br}
-        \label{fig:decay-br}
     \end{minipage}\hfill
         \begin{minipage}[t]{0.48\textwidth}
         \vspace{0pt}%
         \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
+        \captionof{figure}{Кривая распада $^{82}$Br}
+        \label{fig:decay-br-curve}
+    \end{minipage}\hfill
+
+}
+
+
+\headerbox{Активация золота}{name=motivation, below=resolution, span=3, row=0, column=3}{%
+    \BoxBodySize
+    % ==================== ВЕРХНИЙ РЯД: текст ====================
+    \noindent
+    \begin{minipage}[t]{0.96\textwidth}
+        Аналогичным методом проведена активация золота; в качестве образца использована навеска единственного природного изотопа $197\mathrm{Au}$ массой $28\text{,}5$\,мг, воздействие производилось тепловыми и эпитепловыми нейтронами. В первом опыте образец облучался в течение 122 ч, после чего по гамма-линии $411\text{,}8$\,кэВ измерялся период полураспада $198\mathrm{Au}$. Во втором опыте для выделения эпитепловой компоненты использовался кадмиевый фильтр, поглощающий тепловые нейтроны. По измеренным активностям для исследованного образца определены плотности потоков эпитепловых нейтронов.
+        \vspace{0.5em}
+    \end{minipage}
+    % % ==================== НИЖНИЙ РЯД: 2-й график ====================
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
         \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
         \captionof{figure}{Кривая распада $^{198}$Au}
-        \label{fig:spectra-br}
+        \label{fig:spectra-Au}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \vspace{0pt}%
+        \centering
+        \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_new.pdf}
+        \captionof{figure}{Кривая распада $^{198}$Au}
+        \label{fig:spectra-Au-2}
     \end{minipage}
 }
 
-\headerbox{Мотивация дальнейших исследований}{name=motivation, below=resolution, span=3, row=0, column=3}{%
+\headerbox{Перспективы: анализ эндофуллеренов}{name=endo, below=motivation, span=3, row=0, column=3}{%
     \BoxBodySize
-    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
+    % ==================== ТЕКСТ ====================
     \noindent
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
-    %     и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
-    %     В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
-    % \end{minipage}\hfill
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
-    %     \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
-    %     \label{fig:spectra-br}
-    % \end{minipage}
+    \begin{minipage}[t]{0.96\textwidth}
+        Здесь будет краткое описание задачи по анализу эндофуллеренов:
+        методика облучения образцов, регистрация гамма-спектров,
+        обработка данных. Текст-заглушка для оценки вёрстки
+        (примерно 5--7 строк), чтобы блок занял нужную высоту
+        и не «схлопнулся» при компиляции без рисунка.
+        \vspace{0.5em}
+    \end{minipage}
 
-    % % ==================== НИЖНИЙ РЯД: 2-й график ====================
-    % \vspace{0.3em}
-    % \noindent
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
-    %     \captionof{figure}{Кривая распада $^{82}$Br}
-    %     \label{fig:decay-br}
-    % \end{minipage}\hfill
-    %     \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
-    %     \captionof{figure}{Кривая распада $^{198}$Au}
-    % %     \label{fig:spectra-br}
-    % \end{minipage}
-}
-
-\headerbox{Выводы и заключение}{name=conclusion, below=motivation, span=3, row=0, column=3}{%
-    \BoxBodySize
-    % ==================== ВЕРХНИЙ РЯД: текст + 1-й график ====================
+    % ==================== РИСУНОК ВНИЗУ (на всю ширину) ====================
     \noindent
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     Первый опыт на стенде традиционно связан с активацией брома. Естественная смесь изотопов брома содержит 50,69(7)\,\% \textsuperscript{79}Br
-    %     и 49,31(7)\,\% \textsuperscript{81}Br. Сечения нейтронного захвата составляют 11,0(7)\,б и 2,7(2)\,б соответственно~\cite{belanova1986}.
-    %     В результате активации образуются четыре долгоживущих состояния брома: основное состояние \textsuperscript{80}Br с периодом полураспада $T_{1/2} = 18$\,мин, изомерное состояние \textsuperscript{80m}Br с $T_{1/2} = 4{,}2$\,ч, основное состояние \textsuperscript{82}Br с $T_{1/2} = 35$\,ч и изомерное состояние \textsuperscript{82m}Br с $T_{1/2} = 6{,}1$\,мин.
-    % \end{minipage}\hfill
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/spectra_points.pdf}
-    %     \captionof{figure}{Задержанные на время распада $t$ спектры гамма-излучения в распаде $^{82}$Br}
-    %     \label{fig:spectra-br}
-    % \end{minipage}
-
-    % % ==================== НИЖНИЙ РЯД: 2-й график ====================
-    % \vspace{0.3em}
-    % \noindent
-    % \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit.pdf}
-    %     \captionof{figure}{Кривая распада $^{82}$Br}
-    %     \label{fig:decay-br}
-    % \end{minipage}\hfill
-    %     \begin{minipage}[t]{0.48\textwidth}
-    %     \vspace{0pt}%
-    %     \centering
-    %     \includegraphics[width=\linewidth, keepaspectratio]{Images/decay_fit_2.pdf}
-    %     \captionof{figure}{Кривая распада $^{198}$Au}
-    % %     \label{fig:spectra-br}
-    % \end{minipage}
+    \begin{minipage}[t]{0.96\textwidth}
+        \vspace{0pt}%
+        \centering
+        % --- ЗАГЛУШКА: пустая рамка нужного размера ---
+        \fbox{\begin{minipage}[c][5.35cm][c]{0.98\linewidth}
+            \centering\color{gray}\small
+            [ Место для рисунка ]\\
+            (заменить на \texttt{\textbackslash includegraphics})
+        \end{minipage}}
+        \captionof{figure}{Подпись к рисунку (заглушка)}
+        \label{fig:endo}
+    \end{minipage}
 }
-
-   
-
-
 
 % ==================== КОНЕЦ ПОСТЕРА ====================
 \end{poster}
